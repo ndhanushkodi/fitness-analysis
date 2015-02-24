@@ -14,7 +14,9 @@ import thinkplot
 from sklearn import cross_validation
 
 
-df =pd.read_table(r'C:\Users\jmorris\Documents\Classes_Spring_2015\Data_Science\FitnessKeeper\FitnessData_2014.tsv', sep='\t')
+#df =pd.read_table(r'C:\Users\jmorris\Documents\Classes_Spring_2015\Data_Science\FitnessKeeper\FitnessData_2014.tsv', sep='\t')
+df=pd.read_table('/home/ndhanushkodi/SOPHCLASSES/DataSci/FitnesskeeperData/FitnessData_2014.tsv', sep='\t')
+
 #df.info()
 df['genderNum'] = df['gender'].map( {'F': 0, 'M': 1} ).astype(int)
 """
@@ -45,16 +47,17 @@ def RMSE(estimates, actual):
     mse = np.mean(e2)
     return math.sqrt(mse)
     
-samples = (createsEstimation())
-samples.sort()
-print("CI: ")
-print (samples[100])
-print (samples[900])
-print ("RMSE: ")
-print (RMSE(samples, df['distance_mi'].mean()))
+def runEstimation():	
+	samples = (createsEstimation())
+	samples.sort()
+	print("CI: ")
+	print (samples[100])
+	print (samples[900])
+	print ("RMSE: ")
+	print (RMSE(samples, df['distance_mi'].mean()))
 
-plt.hist(samples)
-plt.show()
+	plt.hist(samples)
+	plt.show()
 
 
 
