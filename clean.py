@@ -9,6 +9,9 @@ import thinkplot
 #df=pd.read_table('/home/ndhanushkodi/SOPHCLASSES/DataSci/FitnesskeeperData/FitnessData_2014.tsv', sep='\t')
 
 """
+The actual useful function of this file. 
+So you can run 1 line of code to clean up 
+the data before running any analysis. 
 Cleans data by adding pace column and cleaning by
 distance, duration, and pace.
 """
@@ -20,6 +23,9 @@ def clean_data(df):
 	return rw
 
 
+"""
+Does the groupby user
+"""
 def org_by_user(df):
 	u = df.groupby('userid')
 	return u
@@ -27,6 +33,10 @@ def org_by_user(df):
 def means(u):
 	return u.mean()
 
+"""
+Not really necessary to make this happen in a separate
+python file. Just testing modules. 
+"""
 def trips_before_histogram(trips_before):
 	plt.hist(trips_before, range=(0,600),bins=100)
 	plt.title("Trips_before_histogram")

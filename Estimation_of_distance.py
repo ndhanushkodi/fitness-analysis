@@ -17,22 +17,6 @@ from sklearn import cross_validation
 #df =pd.read_table(r'C:\Users\jmorris\Documents\Classes_Spring_2015\Data_Science\FitnessKeeper\FitnessData_2014.tsv', sep='\t')
 df=pd.read_table('/home/ndhanushkodi/SOPHCLASSES/DataSci/FitnesskeeperData/FitnessData_2014.tsv', sep='\t')
 
-#df.info()
-df['genderNum'] = df['gender'].map( {'F': 0, 'M': 1} ).astype(int)
-"""
-print "MEAN VALUES"
-print "Age: " + str(df['age'].mean())
-print "Distance_mi: " + str(df['distance_mi'].mean())
-print "Duration_mi: " + str(df['duration_min'].mean())
-print "Trips_before: " + str(df['trips_before'].mean())
-print "Distance_before_mi: " + str(df['distance_before_mi'].mean())
-print "Duration_before_min: " + str(df['duration_before_min'].mean())
-print "Is_elite: " + str(df['is_elite'].mean())
-"""
-
-a= df.groupby('userid')
-
-
 
 def createsEstimation():
     values =[]
