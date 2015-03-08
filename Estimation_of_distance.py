@@ -18,6 +18,9 @@ from sklearn import cross_validation
 df=pd.read_table('/home/ndhanushkodi/SOPHCLASSES/DataSci/FitnesskeeperData/FitnessData_2014.tsv', sep='\t')
 
 
+
+
+
 def createsEstimation():
     values =[]
     for i in range(1000):
@@ -40,8 +43,10 @@ def runEstimation():
 	print ("RMSE: ")
 	print (RMSE(samples, df['distance_mi'].mean()))
 
-	plt.hist(samples)
-	plt.show()
+
+plt.hist(samples)
+plt.show()
+
 
 
 
