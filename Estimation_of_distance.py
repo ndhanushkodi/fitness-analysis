@@ -32,6 +32,9 @@ a= df.groupby('userid')
 
 
 
+
+"""
+
 def createsEstimation():
     values =[]
     for i in range(1000):
@@ -55,7 +58,7 @@ print (RMSE(samples, df['distance_mi'].mean()))
 
 plt.hist(samples)
 plt.show()
-
+"""
 
 
 """
